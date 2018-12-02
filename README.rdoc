@@ -1,0 +1,20 @@
+
+== Bk Rw Project
+This is a ruby project that does a series of tests based on provided acceptance criteria
+
+== Prerequisites - Ensure the following is installed.
+* `Ruby ~=2.1`
+* `Test Unit ~=s3.2.8`
+
+== Installation
+Run this command on your terminal to clone the repository
+
+`git clone git@github.com:roselynemakena/BkRw.git`
+
+Run the test script
+
+`ruby bank_test_script.rb`
+
+----
+== contribution
+* Feel free to contribute.
