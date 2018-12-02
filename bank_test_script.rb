@@ -24,6 +24,10 @@ class BankOfKigaliTest < Test::Unit::TestCase
 		@my_driver.quit
 	end
 
+=begin
+This is a test for the homepage test titles and cards
+A/C: There should be 3 cards with the respective titles and description
+=end
 	def test_titles_and_cards
 		@cards = @my_driver.find_elements(:class, 'serviceBox')
 		@open_accounts_card_items = @my_driver.find_elements(:class, 'shortcut-url')
@@ -46,7 +50,11 @@ class BankOfKigaliTest < Test::Unit::TestCase
 		end
 	end
 
-	def test_foreign_exchange_items
+=begin
+This is a test for the foreign exchange buy and sell values
+A/C: The buy value should be less than the sell value
+=end
+	def test_foreign_exchange_buy_and_sell
 			table = @wait.until {@my_driver.find_element(:class, 'table')}
 			if table.displayed?
 			trs = table.find_elements(:tag_name, "tr")
@@ -68,6 +76,10 @@ class BankOfKigaliTest < Test::Unit::TestCase
 		end
 	end
 
+=begin
+This is a test for the Online Banking page - button
+A/C: There should be an 'Apply Button' available on this page
+=end
 	def test_current_menu
 		current_savings_link = @my_driver.find_element(:xpath, '//*[@id="nav"]/div/div/div[2]/ul[1]/li[2]/a')
 		current_savings_link.click
@@ -82,8 +94,10 @@ class BankOfKigaliTest < Test::Unit::TestCase
 	end
 
 	def initialize_variables	
-		#Constants - String Providers
-		#Card at indexPosition 0
+=begin
+All constants that provide Strings for the Acceptace criteria for the tests.
+They are initiated before the test begins.
+=end
 		@title = ["Open account", "Open account", "Open account", "Open account"]
 		@items = [['''Personal Current
 Joint Account
@@ -109,9 +123,8 @@ Loan Advice?'''],
 Visa Prepaid
 Classic Credit Card
 Gold Credit Card
-Platinum Credit Card''']
+Platinum Credit Card''']]
 
-				]
 		@online_banking_slide_title = 	"Online Banking
 										You can do it all on-the-go. Check your account balance, pay your bills, tranfers funds, and do many more on internet.
 										Login here"
