@@ -14,7 +14,6 @@ Run this command on your terminal to clone the repository
 Run the test script
 
 ``` #> ruby bank_test_script.rb```
-
 ----
 == contribution
 * Feel free to contribute.
